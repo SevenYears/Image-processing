@@ -1,0 +1,3 @@
+/Users/doitnow/Desktop/workplace/opencv/Image-processing/osx-debug/CMakeFiles/rebuild_cache.dir
+/Users/doitnow/Desktop/workplace/opencv/Image-processing/osx-debug/CMakeFiles/edit_cache.dir
+/Users/doitnow/Desktop/workplace/opencv/Image-processing/osx-debug/CMakeFiles/ImageProcessing.dir
