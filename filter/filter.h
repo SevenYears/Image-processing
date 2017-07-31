@@ -40,25 +40,25 @@ void CompareFilter(const Mat& src, Mat& dst, const int kernelLen)
 {
     Mat tmp(2*src.rows, 2*src.cols, src.type());
     dst = tmp.clone();
+    cv::Point textLoc(src.cols/8, src.rows/8);
 
-    Mat homoDst;    
+    Mat homoDst;
     cv::blur(src, homoDst, cv::Size(kernelLen, kernelLen), cv::Point(-1, -1));
+    cv::putText(homoDst, "Homogeneous", textLoc, CV_FONT_HERSHEY_COMPLEX, 1, Scalar(255, 255, 255));
+    homoDst.copyTo(dst(cv::Rect(0, 0, src.cols, src.rows)));
+
     Mat gauDst;
     cv::GaussianBlur(src, gauDst, cv::Size(kernelLen, kernelLen), 0, 0);
+    cv::putText(gauDst, "Gaussian", textLoc, CV_FONT_HERSHEY_COMPLEX, 1, Scalar(255, 255, 255));
+    gauDst.copyTo(dst(cv::Rect(0, src.cols, src.cols, src.rows)));
+
     Mat medianDst;
     cv::medianBlur(src, medianDst, kernelLen);
+    cv::putText(medianDst, "Median", textLoc, CV_FONT_HERSHEY_COMPLEX, 1, Scalar(255, 255, 255));
+    medianDst.copyTo(dst(cv::Rect(src.rows, 0, src.cols, src.rows)));
+
     Mat biDst;
     cv::bilateralFilter(src, biDst, kernelLen, 2*kernelLen, kernelLen/2);
-
-    cv::Rect homoRect(0, 0, src.cols, src.rows);
-    homoDst.copyTo(dst(homoRect));
-
-    cv::Rect gauRect(0, src.cols, src.cols, src.rows);
-    gauDst.copyTo(dst(gauRect));
-
-    cv::Rect medianRect(src.rows, 0, src.cols, src.rows);
-    medianDst.copyTo(dst(medianRect));
-
-    cv::Rect biRect(src.rows, src.cols, src.cols, src.rows);
-    biDst.copyTo(dst(biRect));
+    cv::putText(biDst, "Bilateral", textLoc, CV_FONT_HERSHEY_COMPLEX, 1, Scalar(255, 255, 255));
+    biDst.copyTo(dst(cv::Rect(src.rows, src.cols, src.cols, src.rows)));
 }

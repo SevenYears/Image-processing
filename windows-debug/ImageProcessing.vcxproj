@@ -52,9 +52,6 @@
   <ImportGroup Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <Import Project="OpenCV3.2PropertySheet.props" />
-  </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
@@ -85,7 +82,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\workspace\imageprocessing\Image-processing;D:\opensourcelib\opencv3.2\build\include;D:\opensourcelib\opencv3.2\build\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\opensourcelib\opencv3.2\build\include;D:\opensourcelib\opencv3.2\build\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -102,10 +99,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\workspace\imageprocessing\Image-processing;D:\opensourcelib\opencv3.2\build\include;D:\opensourcelib\opencv3.2\build\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\opensourcelib\opencv3.2\build\include;D:\opensourcelib\opencv3.2\build\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\workspace\imageprocessing\Image-processing;D:\opensourcelib\opencv3.2\build\include;D:\opensourcelib\opencv3.2\build\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\opensourcelib\opencv3.2\build\include;D:\opensourcelib\opencv3.2\build\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -130,7 +127,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\workspace\imageprocessing\Image-processing;D:\opensourcelib\opencv3.2\build\include;D:\opensourcelib\opencv3.2\build\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\opensourcelib\opencv3.2\build\include;D:\opensourcelib\opencv3.2\build\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -147,10 +144,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\workspace\imageprocessing\Image-processing;D:\opensourcelib\opencv3.2\build\include;D:\opensourcelib\opencv3.2\build\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\opensourcelib\opencv3.2\build\include;D:\opensourcelib\opencv3.2\build\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\workspace\imageprocessing\Image-processing;D:\opensourcelib\opencv3.2\build\include;D:\opensourcelib\opencv3.2\build\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\opensourcelib\opencv3.2\build\include;D:\opensourcelib\opencv3.2\build\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -175,7 +172,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\workspace\imageprocessing\Image-processing;D:\opensourcelib\opencv3.2\build\include;D:\opensourcelib\opencv3.2\build\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\opensourcelib\opencv3.2\build\include;D:\opensourcelib\opencv3.2\build\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -192,10 +189,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\workspace\imageprocessing\Image-processing;D:\opensourcelib\opencv3.2\build\include;D:\opensourcelib\opencv3.2\build\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\opensourcelib\opencv3.2\build\include;D:\opensourcelib\opencv3.2\build\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\workspace\imageprocessing\Image-processing;D:\opensourcelib\opencv3.2\build\include;D:\opensourcelib\opencv3.2\build\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\opensourcelib\opencv3.2\build\include;D:\opensourcelib\opencv3.2\build\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -220,7 +217,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\workspace\imageprocessing\Image-processing;D:\opensourcelib\opencv3.2\build\include;D:\opensourcelib\opencv3.2\build\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\opensourcelib\opencv3.2\build\include;D:\opensourcelib\opencv3.2\build\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -236,10 +233,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\workspace\imageprocessing\Image-processing;D:\opensourcelib\opencv3.2\build\include;D:\opensourcelib\opencv3.2\build\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\opensourcelib\opencv3.2\build\include;D:\opensourcelib\opencv3.2\build\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\workspace\imageprocessing\Image-processing;D:\opensourcelib\opencv3.2\build\include;D:\opensourcelib\opencv3.2\build\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\opensourcelib\opencv3.2\build\include;D:\opensourcelib\opencv3.2\build\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -326,6 +323,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{379F364F-7E1A-3B6A-8375-006D6C476FB0}</Project>
       <Name>ZERO_CHECK</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\filter\filter.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -21,19 +21,27 @@ void Test_Filter(const Mat& src, Mat& dst)
 int main(void)
 {
 	cout << CV_VERSION << endl;
-	namedWindow("Image", WINDOW_AUTOSIZE);
-	namedWindow("Result", WINDOW_AUTOSIZE);
 
 	Mat image = imread("../data/lena.jpg", IMREAD_COLOR);
 	Mat result;
-	
+
 	//Test_Filter(image, result);
 	CompareFilter(image, result, 31);
 
-	imshow("Image", image);
-	imshow("Result", result);
+	// namedWindow("Image", WINDOW_AUTOSIZE);
+	// namedWindow("Result", WINDOW_AUTOSIZE);
+	// imshow("Image", image);
+	// imshow("Result", result);
+
+	
+	try {
+		cv::imwrite("res.jpg", result);
+	}
+	catch (runtime_error& ex) {
+		fprintf(stderr, "Exception converting image to jpg format: %s\n", ex.what());
+	}
 
 	waitKey(0);
-
+	system("pause");
 	return 0;
 }
