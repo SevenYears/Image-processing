@@ -8,6 +8,7 @@
 #include "opencv2/highgui.hpp"
 
 #include "filter/filter.h"
+#include "play/play.h"
 
 using namespace std;
 using namespace cv;
@@ -26,22 +27,20 @@ int main(void)
 	Mat result;
 
 	//Test_Filter(image, result);
-	CompareFilter(image, result, 31);
+	//CompareFilter(image, result, 31);
+
+	//result = Sketch(image);
+	result = OilPaint(image);
+
+	cv::imwrite("../data/res.jpg", result);
 
 	// namedWindow("Image", WINDOW_AUTOSIZE);
 	// namedWindow("Result", WINDOW_AUTOSIZE);
 	// imshow("Image", image);
-	// imshow("Result", result);
-
-	
-	try {
-		cv::imwrite("res.jpg", result);
-	}
-	catch (runtime_error& ex) {
-		fprintf(stderr, "Exception converting image to jpg format: %s\n", ex.what());
-	}
-
+#ifdef _DEBUG
+	imshow("Result", result);
 	waitKey(0);
-	system("pause");
+#endif
+	
 	return 0;
 }

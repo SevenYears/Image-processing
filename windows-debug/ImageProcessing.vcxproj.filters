@@ -15,5 +15,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\filter\filter.h" />
+    <ClInclude Include="..\play\play.h" />
   </ItemGroup>
 </Project>
