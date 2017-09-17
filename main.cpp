@@ -7,11 +7,13 @@
 #include "opencv2/imgcodecs.hpp"
 #include "opencv2/highgui.hpp"
 
-#include "filter/filter.h"
-#include "play/play.h"
+#include "filter.hpp"
+#include "play.hpp"
 
 using namespace std;
 using namespace cv;
+
+const string path = "/Users/doitnow/Documents/workplace/cv/imageprocess/imageprocess/";
 
 void Test_Filter(const Mat& src, Mat& dst)
 {
@@ -23,7 +25,7 @@ int main(void)
 {
 	cout << CV_VERSION << endl;
 
-	Mat image = imread("../data/lena.jpg", IMREAD_COLOR);
+	Mat image = imread(path + "data/lena.jpg", IMREAD_COLOR);
 	Mat result;
 
 	//Test_Filter(image, result);
@@ -32,7 +34,7 @@ int main(void)
 	//result = Sketch(image);
 	result = OilPaint(image);
 
-	cv::imwrite("../data/res.jpg", result);
+	cv::imwrite(path + "data/res.jpg", result);
 
 	// namedWindow("Image", WINDOW_AUTOSIZE);
 	// namedWindow("Result", WINDOW_AUTOSIZE);
